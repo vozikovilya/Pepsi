@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>
+        Pepsi
+    </title>
+</head>
+<body>
+    <section class="section sec">
+        <header class="header">
+            <a href=""><img src="img/logo.png" alt="logo" class="header__logo"></a>
+
+            <div class="header__burger" onclick="burger();"></div>
+
+            <ul class="header__menu menu">
+                <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Products</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">What's New</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Newsletter</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2 class="textBox__title">That's What<br><span>I like</span></h2>
+                <p class="textBox__p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste molestiae aspernatur beatae quae autem nihil! Quibusdam exercitationem vero, neque ratione non, magni dolorum dignissimos, consectetur eveniet laudantium fugit? Eius, itaque?</p>
+                <a href="#" class="textBox__link">View All Products</a>
+            </div>
+
+            <div class="imgBox">
+                <img src="img/picture/pepsi001.png" alt="Picture" class="imgBox__img">
+            </div>
+        </div>
+
+        <ul class="list-picture">
+            <li class="list-picture__item">
+                <img class="list-picture__img" src="img/picture/pepsi001.png" alt="Picture" onclick="imgSlider('img/picture/pepsi001.png');changeBgColor('#0062be')">
+            </li>
+            <li class="list-picture__item">
+                <img class="list-picture__img" src="img/picture/pepsi002.png" alt="Picture" onclick="imgSlider('img/picture/pepsi002.png');changeBgColor('#e60c2c')">
+            </li>
+            <li class="list-picture__item">
+                <img class="list-picture__img" src="img/picture/pepsi003.png" alt="Picture" onclick="imgSlider('img/picture/pepsi003.png');changeBgColor('#1e1e1e')">
+            </li>
+        </ul>
+
+        <ul class="list-social">
+            <li class="list-social__item"><a href="#" class="list-social__link"><img src="img/social/facebook.png" alt="facebook" class="list-social__img"></a></li>
+            <li class="list-social__item"><a href="#" class="list-social__link"><img src="img/social/twitter.png" alt="twitter" class="list-social__img"></a></li>
+            <li class="list-social__item"><a href="#" class="list-social__link"><img src="img/social/instagram.png" alt="instagram" class="list-social__img"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.imgBox__img').src = anything;
+        }
+
+        function changeBgColor(color) {
+            const section = document.querySelector('.section');
+            section.style.background = color;
+        }
+
+        function burger() {
+            const header__burger = document.querySelector('.header__burger');
+            const menu = document.querySelector('.menu');
+            header__burger.classList.toggle('active')
+            menu.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
